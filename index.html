@@ -6,15 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <!-- add "Portfolio/css/" for build -->
-    <link rel="stylesheet" href="Portfolio/css/reset.css">
-    <link rel="stylesheet" href="Portfolio/css/index.css">
+    <link rel="stylesheet" href="/Portfolio/css/reset.css">
+    <link rel="stylesheet" href="/Portfolio/css/index.css">
     <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <script type="text/javascript">
         function SendMail() {
             document.getElementById('contact-form').addEventListener('submit', function (event) {
                 event.preventDefault();
-
                 emailjs.sendForm('zoho', 'template_TjSgGS73', this, 'user_3fLdbiFWKtZnpy1zRxCXU')
                     .then(function (response) {
                         console.log('SUCCESS!', response.status, response.text);
@@ -26,7 +25,6 @@
         $(document).ready(function () {
             emailjs.init("user_3fLdbiFWKtZnpy1zRxCXU");
             SendMail();
-
             $('.scroll-bt').click(function () {
                 $('html').animate({
                     scrollTop: $($.attr(this, 'href')).offset().top
@@ -139,19 +137,22 @@
                         <li>
                             <span class="job-title">Universidade Feevale</span>
                             <p class="job-description">
-                                In my last job at Universidade Feevale, I worked as Full-Stack developer for 2 years, developing new platforms and tools for the University systems.
+                                In my last job at Universidade Feevale, I worked as Full-Stack developer for 2 years, developing new platforms and tools
+                                for the University systems.
                             </p>
                         </li>
                         <li>
                             <span class="job-title">WT</span>
                             <p class="job-description">
-                                Worked as a Front-End, mostly with B2C, but also developed browser games, like an advertisement game for Kids developed to Ortopé. 
+                                Worked as a Front-End, mostly with B2C, but also developed browser games, like an advertisement game for Kids developed to
+                                Ortopé.
                             </p>
                         </li>
                         <li>
                             <span class="job-title">Maqina Internet</span>
                             <p class="job-description">
-                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law firms and e-mail marketing.
+                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law
+                                firms and e-mail marketing.
                             </p>
                         </li>
                     </ul>
@@ -182,7 +183,6 @@
                 <h2 class="section-title">TAKE A LOOK AT SOME OF MY
                     <b>PROJECT</b>
                 </h2>
-
             </div>
         </section> -->
     </main>
@@ -193,7 +193,6 @@
 <script>
         // for (let i = 0; i <= 365; i++) {
         //     $("#activity .inner-container").append("<span id='point-"+ i +"' class='point active'></span>");
-
         // }
 </script>
 
