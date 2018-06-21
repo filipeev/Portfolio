@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- add "Portfolio/css/" for build -->
     <link rel="stylesheet" href="Portfolio/css/reset.css">
     <link rel="stylesheet" href="Portfolio/css/index.css">
-    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
-        crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.1.0.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
     <script type="text/javascript">
         function SendMail() {
@@ -26,6 +26,13 @@
         $(document).ready(function () {
             emailjs.init("user_3fLdbiFWKtZnpy1zRxCXU");
             SendMail();
+
+            $('.scroll-bt').click(function () {
+                $('html').animate({
+                    scrollTop: $($.attr(this, 'href')).offset().top
+                }, 500);
+                return false;
+            });
         });
     </script>
     <title>Filipe Vargas - Developer</title>
@@ -33,13 +40,13 @@
 
 <body>
     <header>
-        <div class="container">
+        <!-- <div class="container">
             <nav id="nav-header">
                 <a href="javascript:void(0)" title="About">About</a>
-                <a href="javascript:void(0)" title="Work">Work</a>
-                <a href="javascript:void(0)" title="Contact">Contact</a>
+                <a href="#skills" title="Skills">Skills</a>
+                <a href="#contact" title="Contact">Contact</a>
             </nav>
-        </div>
+        </div> -->
     </header>
     <section id="banner">
         <div class="content">
@@ -50,7 +57,7 @@
                 I had evolved my skills as developer and I had worked with JS ,HTML, .NET, VUE.JS, Typescript, KNOCKOUT.JS,
                 SASS, LESS, SQL, C#, BOOTSTRAP, WORDPRESS, Unity.
             </p>
-            <button class="btn">Contact-me</button>
+            <a href="#contact" class="btn scroll-bt">Contact-me</a>
         </div>
     </section>
     <main>
@@ -132,27 +139,24 @@
                         <li>
                             <span class="job-title">Universidade Feevale</span>
                             <p class="job-description">
-                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law
-                                firms and e-mail marketing.
+                                In my last job at Universidade Feevale, I worked as Full-Stack developer for 2 years, developing new platforms and tools for the University systems.
                             </p>
                         </li>
                         <li>
                             <span class="job-title">WT</span>
                             <p class="job-description">
-                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law
-                                firms and e-mail marketing.
+                                Worked as a Front-End, mostly with B2C, but also developed browser games, like an advertisement game for Kids developed to Ortopé. 
                             </p>
                         </li>
                         <li>
                             <span class="job-title">Maqina Internet</span>
                             <p class="job-description">
-                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law
-                                firms and e-mail marketing.
+                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law firms and e-mail marketing.
                             </p>
                         </li>
                     </ul>
                 </div>
-                <button class="btn inverse">Take a look at my resume</button>
+                <a href="https://drive.google.com/open?id=0B1DGrm2FvhmiUVNqSHlaS2toZVU" target="_blank" class="btn inverse">Take a look at my resume</a>
             </div>
         </section>
         <section id="contact">
@@ -161,7 +165,7 @@
                     <h4 class="contact-title">DON’T BE
                         <b>SHY</b>, TALK WHIT ME :)</h4>
                     <p class="contact-description">
-                        I’m working as freelancer, so if you want to work with me or have any questions, send me a message and let’s talk about it.
+                        I'm currently looking for a job, if you liked my skills send me an email and let's talk.
                     </p>
                     <form id="contact-form">
                         <input type="text" name="form_name" id="name" placeholder="Your name">

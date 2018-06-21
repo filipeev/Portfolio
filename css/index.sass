@@ -11,6 +11,10 @@ $color-4: #666666 // gray - borders and details
     padding: 15px 25px
     border: none
     cursor: pointer
+    text-decoration: none
+    transition: all 0.8s
+    &:hover
+        background: #000
     &.inverse
         background: transparent
         border: 2px solid $color-4
@@ -56,7 +60,8 @@ header
         font-size: 26px
         color: $color-1
     .btn
-        margin: 0 auto
+        display: table
+        margin: 20px auto
 
 // SKILLS
 
@@ -139,9 +144,10 @@ header
             margin: 10px auto
             line-height: 20px
     .btn
+        display: table
         font-size: 18px
         font-weight: bold
-        margin-top: 40px
+        margin: 40px auto
         padding: 15px 80px !important
 
 // CONTACT
@@ -169,8 +175,9 @@ header
             color: #fff
     .contact-description
         width: 420px
-        font-size: 16px
-        color: $color-4
+        font-size: 18px
+        letter-spacing: 2px
+        color: $color-3
         display: block
         margin-bottom: 20px
     #contact-form
