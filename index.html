@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="/css/reset.css">
+    <link rel="stylesheet" href="/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n"
+        crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.emailjs.com/sdk/2.2.4/email.min.js"></script>
+    <script type="text/javascript">
+        function SendMail() {
+            document.getElementById('contact-form').addEventListener('submit', function (event) {
+                event.preventDefault();
+
+                emailjs.sendForm('zoho', 'template_TjSgGS73', this, 'user_3fLdbiFWKtZnpy1zRxCXU')
+                    .then(function (response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                    }, function (error) {
+                        console.log('FAILED...', error);
+                    });
+            });
+        }
+        $(document).ready(function () {
+            emailjs.init("user_3fLdbiFWKtZnpy1zRxCXU");
+            SendMail();
+        });
+    </script>
+    <title>Filipe Vargas - Developer</title>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <nav id="nav-header">
+                <a href="javascript:void(0)" title="About">About</a>
+                <a href="javascript:void(0)" title="Work">Work</a>
+                <a href="javascript:void(0)" title="Contact">Contact</a>
+            </nav>
+        </div>
+    </header>
+    <section id="banner">
+        <div class="content">
+            <h3 class="banner-title">I'm
+                <b class="txt-realse">Filipe Vargas</b>, and it's nice to met you</h3>
+            <p class="banner-txt">
+                I’m graduated in Game Development and I’m started to work as Front-End developer with 16 years old. Now with 8 years of experience
+                I had evolved my skills as developer and I had worked with JS ,HTML, .NET, VUE.JS, Typescript, KNOCKOUT.JS,
+                SASS, LESS, SQL, C#, BOOTSTRAP, WORDPRESS, Unity.
+            </p>
+            <button class="btn">Contact-me</button>
+        </div>
+    </section>
+    <main>
+        <section id="skills">
+            <h2 class="section-title">Overview</h2>
+            <div class="content">
+                <div class="skills-block">
+                    <h4 class="block-title">My
+                        <b class="txt-realse">Skills</b>
+                    </h4>
+                    <ul class="skill-list">
+                        <li>
+                            <span class="skill-description">HTML</span>
+                            <span class="skill-point">10
+                                <span class="points" style="width: 100%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">Javascript</span>
+                            <span class="skill-point">8
+                                <span class="points" style="width: 80%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">CSS/SASS</span>
+                            <span class="skill-point">9
+                                <span class="points" style="width: 90%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">JQuery</span>
+                            <span class="skill-point">9
+                                <span class="points" style="width: 90%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">Vue</span>
+                            <span class="skill-point">7
+                                <span class="points" style="width: 70%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">Knockout</span>
+                            <span class="skill-point">6
+                                <span class="points" style="width: 60%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">C#</span>
+                            <span class="skill-point">8
+                                <span class="points" style="width: 80%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">Unity</span>
+                            <span class="skill-point">8
+                                <span class="points" style="width: 80%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">.NET</span>
+                            <span class="skill-point">7
+                                <span class="points" style="width: 70%"></span>
+                            </span>
+                        </li>
+                        <li>
+                            <span class="skill-description">SQL</span>
+                            <span class="skill-point">6
+                                <span class="points" style="width: 60%"></span>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skills-block">
+                    <h4 class="block-title">Past
+                        <b class="txt-realse">Jobs</b>
+                    </h4>
+                    <ul class="job-list">
+                        <li>
+                            <span class="job-title">Universidade Feevale</span>
+                            <p class="job-description">
+                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law
+                                firms and e-mail marketing.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="job-title">WT</span>
+                            <p class="job-description">
+                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law
+                                firms and e-mail marketing.
+                            </p>
+                        </li>
+                        <li>
+                            <span class="job-title">Maqina Internet</span>
+                            <p class="job-description">
+                                Worked as a Web Developer, creating websites B2C, landing pages, Institutional pages for universities, forms system for law
+                                firms and e-mail marketing.
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+                <button class="btn inverse">Take a look at my resume</button>
+            </div>
+        </section>
+        <section id="contact">
+            <div class="container">
+                <div class="content">
+                    <h4 class="contact-title">DON’T BE
+                        <b>SHY</b>, TALK WHIT ME :)</h4>
+                    <p class="contact-description">
+                        I’m working as freelancer, so if you want to work with me or have any questions, send me a message and let’s talk about it.
+                    </p>
+                    <form id="contact-form">
+                        <input type="text" name="form_name" id="name" placeholder="Your name">
+                        <input type="text" name="form_subject" id="subject" placeholder="Tell me about what you want to talk">
+                        <input type="email" name="form_email" id="email" placeholder="Your E-mail">
+                        <textarea name="form_msg" id="txt-contact" cols="30" rows="10"></textarea>
+                        <button type="submit" id="btn-send" class="btn">Send</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <!-- <section id="work">
+            <div class="container">
+                <h2 class="section-title">TAKE A LOOK AT SOME OF MY
+                    <b>PROJECT</b>
+                </h2>
+
+            </div>
+        </section> -->
+    </main>
+    <footer>
+        <span class="footer-txt">FILIPE WILLIAN DE VARGAS - HELLO@FILIPEVARGASS.COM - 2018</span>
+    </footer>
+</body>
+<script>
+        // for (let i = 0; i <= 365; i++) {
+        //     $("#activity .inner-container").append("<span id='point-"+ i +"' class='point active'></span>");
+
+        // }
+</script>
+
+</html>
