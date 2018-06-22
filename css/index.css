@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
 .btn {
   background: #222222;
   color: #EDEDED;
@@ -6,6 +7,7 @@
   cursor: pointer;
   text-decoration: none;
   transition: all 0.8s;
+  text-transform: uppercase;
 }
 
 .btn:hover {
@@ -15,6 +17,10 @@
 .btn.inverse {
   background: transparent;
   border: 2px solid #666666;
+}
+
+body {
+  font-family: 'Fjalla One', sans-serif;
 }
 
 header .container {
@@ -42,7 +48,7 @@ header #nav-header a {
   display: table;
   position: relative;
   width: 100%;
-  height: 757px;
+  height: 550px;
   z-index: 1;
   background: url("../img/main-banner.jpg");
 }
@@ -51,23 +57,30 @@ header #nav-header a {
   display: block;
   position: relative;
   width: 500px;
-  margin: 230px auto 0;
+  margin: 100px auto 0;
   text-align: center;
 }
 
 #banner .banner-title {
   font-size: "Myriad Pro", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
   display: block;
+  text-transform: uppercase;
   text-align: center;
+  line-height: 48px;
   font-size: 42px;
   color: #222222;
+}
+
+#banner .banner-title .txt-realse {
+  color: #EDEDED;
 }
 
 #banner .banner-txt {
   display: block;
   margin: 15px 0;
   text-align: center;
-  font-size: 26px;
+  font-size: 22px;
+  line-height: 30px;
   color: #222222;
 }
 
@@ -215,7 +228,9 @@ header #nav-header a {
   display: block;
   font-size: 30px;
   font-weight: bold;
+  letter-spacing: 2px;
   text-transform: uppercase;
+  text-align: center;
   color: #000;
   margin-bottom: 20px;
 }
@@ -225,11 +240,13 @@ header #nav-header a {
 }
 
 #contact .contact-description {
-  width: 420px;
+  width: 418px;
+  text-align: center;
   font-size: 18px;
   letter-spacing: 2px;
   color: #EDEDED;
   display: block;
+  line-height: 25px;
   margin-bottom: 20px;
 }
 
@@ -267,6 +284,10 @@ header #nav-header a {
   text-transform: uppercase;
 }
 
+.emailjs-sending #btn-send {
+  background: #9c9c9c;
+}
+
 footer {
   width: 100%;
   background: #111111;
@@ -279,6 +300,49 @@ footer .footer-txt {
   text-align: center;
   font-size: 18px;
   color: #fff;
+}
+
+#over {
+  position: relative;
+  display: none;
+}
+
+#overscreen {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #222222;
+  opacity: 0.9;
+  z-index: 5;
+}
+
+.box-msg {
+  position: fixed;
+  top: 45%;
+  left: calc(50% - 175px);
+  margin: 0 auto;
+  width: 350px;
+  background: #fff;
+  z-index: 6;
+}
+
+.box-msg .tt-dialog {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  background: #666666;
+  color: #EDEDED;
+}
+
+.box-msg .txt-dialog {
+  display: block;
+  text-align: center;
+  padding: 20px;
+  background: #EDEDED;
+  letter-spacing: 1.5px;
+  line-height: 20px;
 }
 
 @media (max-width: 1000px) {
@@ -324,6 +388,49 @@ footer .footer-txt {
   }
   #skills .content {
     width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  body {
+    display: table;
+  }
+  #banner .content {
+    width: 300px;
+    margin: 45px;
+  }
+  #skills .skills-block {
+    width: 100%;
+    margin-top: 45px;
+  }
+  #skills .block-title {
+    font-size: 32px;
+    text-transform: uppercase;
+  }
+  #skills .section-title {
+    display: none;
+  }
+  #skills .job-list .job-description {
+    width: auto;
+  }
+  #skills .btn {
+    font-size: 15px;
+  }
+  #contact {
+    height: 740px;
+  }
+  #contact .contact-title {
+    width: 320px;
+    font-size: 22px;
+  }
+  #contact .contact-description {
+    width: 320px;
+  }
+  #contact #contact-form {
+    width: 320px;
+  }
+  footer .footer-txt {
+    font-size: 14px;
   }
 }
 /*# sourceMappingURL=index.css.map */
